@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Balls-moving</title>
+  <style>
+    body {
+      background: #f7f4e6;
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .liquid-balls {
+      width: 282px;
+      height: 170px;
+      position: relative;
+    }
+    .ball {
+      position: absolute;
+      border-radius: 50%;
+      will-change: transform;
+    }
+    .ball1 {
+      width: 70px; height: 70px;
+      left: 35px; top: 54px;
+      background: radial-gradient(circle at 40% 50%, #599289 70%, #475370 100%);
+      animation: move1 5.5s ease-in-out infinite;
+    }
+    .ball2 {
+      width: 52px; height: 52px;
+      left: 135px; top: 70px;
+      background: radial-gradient(circle at 60% 40%, #ceb459 67%, #a59573 100%);
+      animation: move2 5.5s ease-in-out infinite;
+    }
+    .ball3 {
+      width: 36px; height: 36px;
+      left: 176px; top: 100px;
+      background: radial-gradient(circle at 40% 40%, #f5f3eb 100%, #e4e1d4 100%);
+      animation: move3 5.5s ease-in-out infinite;
+    }
+    @keyframes move1 {
+      0%   { transform: translateY(0px) scale(1);}
+      20%  { transform: translateY(-13px) scale(1.13);}
+      50%  { transform: translateY(-7px) scale(0.93);}
+      80%  { transform: translateY(10px) scale(1.15);}
+      100% { transform: translateY(0px) scale(1);}
+    }
+    @keyframes move2 {
+      0%   { transform: translateY(0px) scale(1);}
+      18%  { transform: translateY(-10px) scale(1.09);}
+      50%  { transform: translateY(-7px) scale(1.12);}
+      80%  { transform: translateY(8px) scale(0.90);}
+      100% { transform: translateY(0px) scale(1);}
+    }
+    @keyframes move3 {
+      0%   { transform: translateY(0px) scale(1);}
+      25%  { transform: translateY(-5px) scale(0.95);}
+      55%  { transform: translateY(-13px) scale(1.13);}
+      90%  { transform: translateY(8px) scale(1.03);}
+      100% { transform: translateY(0px) scale(1);}
+    }
+  </style>
+</head>
+<body>
+  <div class="liquid-balls">
+    <div class="ball ball1"></div>
+    <div class="ball ball2"></div>
+    <div class="ball ball3"></div>
+  </div>
+</body>
+</html>
